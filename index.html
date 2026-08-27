@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Canım Sevgilime</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23F72585' d='M50 88.5C21.6 71 8 52.8 8 33.6 8 19 19.5 8 33.5 8c8.2 0 16.1 4.1 21 11 4.9-6.9 12.8-11 21-11C89.5 8 101 19 101 33.6c0 19.2-13.6 37.4-42 54.9z'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+    <audio id="bg-music" src="audio/music.mp3" loop preload="auto"></audio>
+
+    <canvas id="petals-canvas"></canvas>
+
+    <div class="top-controls">
+        <button id="music-toggle" class="icon-btn" aria-label="Müziği Başlat/Durdur" title="Müzik Çal">
+            <span class="music-icon">🎵</span>
+            <span class="music-text">Müzik</span>
+        </button>
+    </div>
+
+    <main class="app-container">
+        
+        <header class="main-header">
+            <h1 class="romantic-title">Nilsu</h1>
+            <div class="title-sparkles">✨</div>
+        </header>
+
+        <div class="pages-wrapper" id="pages-wrapper">
+            
+            <section class="page active" data-page="1">
+                <div class="flower-container" id="flower-page-1">
+                </div>
+                <div class="message-box">
+                    <p class="handwritten-note">Sen benim kalbimde açan en güzel baharsın, ömrümü güzelleştiren tek çiçeğimsin...</p>
+                </div>
+            </section>
+
+            <section class="page" data-page="2">
+                <div class="flower-container" id="flower-page-2">
+                </div>
+                <div class="interactive-reasons">
+                    <h2 class="section-subtitle">Seni Sevmemin Birkaç Nedeni 💖</h2>
+                    <div class="reasons-grid">
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">Gözlerin ✨</div>
+                                <div class="card-back">Bana her baktığında içimi ısıtan, dünyadaki tüm karanlıkları unutturan o sıcacık ışıltın.</div>
+                            </div>
+                        </div>
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">Gülüşün 🌸</div>
+                                <div class="card-back">Bütün yorgunluğumu bir anda silip süpüren, dünyadaki en tatlı ve saf mucize.</div>
+                            </div>
+                        </div>
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">Huzurun 🕊️</div>
+                                <div class="card-back">Ses tonunda, şefkatinde ve varlığında bulduğum, başka hiçbir yerde olmayan sonsuz dinginlik.</div>
+                            </div>
+                        </div>
+                        <div class="reason-card" tabindex="0">
+                            <div class="card-inner">
+                                <div class="card-front">Güzel Kalbin 💕</div>
+                                <div class="card-back">Her şeye sevgiyle yaklaşan o temiz ruhun ve hayatıma kattığın tüm tarifsiz güzellikler.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page" data-page="3">
+                <div class="interactive-garden" id="interactive-garden">
+                    <div class="garden-hint-flower">
+                        <span>🌸 Dokun ve Çiçek Açtır 🌺</span>
+                    </div>
+                </div>
+                <div class="message-box">
+                    <p class="handwritten-note">Dokunduğun her yeri güzelleştiren, gönlümün en zarif bahçesisin...</p>
+                </div>
+            </section>
+
+            <section class="page" data-page="4">
+                <div class="envelope-wrapper">
+                    <div class="envelope" id="love-envelope">
+                        <div class="envelope-back"></div>
+                        <div class="envelope-letter">
+                            <div class="letter-stamp">💌</div>
+                            <h3 class="letter-heading">Sevgili Nilsu,</h3>
+                            <p class="letter-body">
+                                Hayatıma girdiğin andan itibaren dünyama neşe, kalbime sonsuz bir huzur getirdin. Seninle geçen her saniye, ömrüme kazınan en kıymetli hazineye dönüşüyor. İyi ki varsın, iyi ki yolum seninle kesişti. Yanındayken kendimi dünyanın en şanslı insanı hissediyorum. Yüzündeki o sıcacık tebessüm hiç solmasın; çünkü senin mutluluğun benim en büyük sevincim. Geleceğe umutla bakmamın, her yeni güne gülümseyerek başlamamın en güzel sebebisin. Birlikte büyüteceğimiz nice güzel hayallere, paylaştığımız kahkahalara ve sonsuz bir aşka... Seni her şeyden ve herkesten çok, kelimelere sığmayacak kadar büyük bir sevgiyle seviyorum bir tanem. ❤️
+                            </p>
+                            <p class="letter-signature">Her zaman seninle...</p>
+                        </div>
+                        <div class="envelope-front"></div>
+                        <div class="envelope-top"></div>
+                        <div class="envelope-seal" id="envelope-seal">
+                            <span class="seal-heart">❤️</span>
+                            <span class="seal-text">Mektubu Aç</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-box">
+                    <p class="handwritten-note">Sana kalbimin en derin köşesinden yazılan bir mektup...</p>
+                </div>
+            </section>
+
+            <section class="page" data-page="5">
+                <div class="polaroid-gallery">
+                    <div class="polaroid-card" data-album="0">
+                        <div class="polaroid-img-box">
+                            <img src="images/foto1.jpeg" alt="Anı 1" class="polaroid-thumb">
+                            <span class="badge-count">3 Fotoğraf 📷</span>
+                        </div>
+                        <p class="polaroid-caption">Unutulmaz Anlarımız ✨</p>
+                    </div>
+                    <div class="polaroid-card" data-album="1">
+                        <div class="polaroid-img-box warm-bg">
+                            <img src="images/foto6.jpeg" alt="Anı 2" class="polaroid-thumb">
+                            <span class="badge-count">3 Fotoğraf 📷</span>
+                        </div>
+                        <p class="polaroid-caption">Sonsuz Sevdamız ❤️</p>
+                    </div>
+                </div>
+                <div class="message-box">
+                    <p class="handwritten-note">Seninle biriktirdiğimiz her saniye, ömrümün en değerli hediyesi.</p>
+                </div>
+            </section>
+
+            <section class="page" data-page="6">
+                <div class="flower-container" id="flower-page-6">
+                </div>
+                <div class="message-box final-message">
+                    <h2 class="final-heading">İyi ki Sen Nilsu'm ❤️</h2>
+                    <p class="handwritten-note">Sen benim dünümsün, bugünümsün ve daima en güzel yarınımsın...</p>
+                    <button class="replay-btn" id="replay-btn">
+                        <span>🔄 Başa Dön</span>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="nav-divider"></div>
+
+        <nav class="bottom-nav">
+            <button id="prev-btn" class="nav-arrow" aria-label="Önceki Sayfa" title="Önceki Sayfa">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+
+            <div class="nav-center">
+                <p id="page-message" class="nav-message-text">Aşk bahçemdeki tek çiçek</p>
+                <div class="page-indicator">
+                    <span id="current-page">1</span> / <span id="total-pages">6</span>
+                </div>
+            </div>
+
+            <button id="next-btn" class="nav-arrow" aria-label="Sonraki Sayfa" title="Sonraki Sayfa">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </nav>
+
+    </main>
+
+    <div id="photo-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close-btn" aria-label="Kapat">&times;</button>
+            <h3 id="modal-album-title" class="modal-album-title">Unutulmaz Anlarımız ✨</h3>
+
+            <div class="carousel-container" id="modal-carousel">
+                <button id="slide-prev" class="slide-arrow prev-arrow" aria-label="Önceki Fotoğraf">&#10094;</button>
+                
+                <div class="slide-image-wrapper">
+                    <img id="modal-photo-img" src="images/foto1.jpeg" alt="Fotoğraf">
+                </div>
+                
+                <button id="slide-next" class="slide-arrow next-arrow" aria-label="Sonraki Fotoğraf">&#10095;</button>
+            </div>
+
+            <p id="modal-photo-caption" class="modal-photo-caption">Seninle her anımız bir ömre bedel... ✨</p>
+            
+            <div id="modal-dots" class="modal-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="flowers.js?v=4"></script>
+    <script src="script.js?v=4"></script>
+</body>
+</html>
